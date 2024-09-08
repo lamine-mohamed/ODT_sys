@@ -20,7 +20,6 @@ img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 # Metrics storage
 metrics = {
-    'Accuracy': {},
     'Speed': {},
     'Robustness': {},
     'Computational Efficiency': {}
@@ -66,7 +65,8 @@ def faster_rcnn_detection(image):
 
 # Calculate robustness (a proxy measure based on the number of detections)
 def calculate_robustness(detections):
-    return len(detections)  # Placeholder for robustness calculation
+     # Placeholder for robustness calculation 
+    return len(detections) 
 
 # Calculate computational efficiency (inverse of the time taken)
 def calculate_efficiency(time_taken):
@@ -78,11 +78,6 @@ yolo5_img, yolo5_time = time_execution(yolo5_detection, img_rgb)
 yolo8_img, yolo8_time = time_execution(yolo8_detection, img_rgb)
 faster_rcnn_img, faster_rcnn_time = time_execution(faster_rcnn_detection, img_rgb)
 
-# Assuming accuracy and robustness metrics are calculated based on some ground truth
-metrics['Accuracy']['Contour Detection'] = 0.6  # Placeholder value
-metrics['Accuracy']['YOLOv5'] = 0.9  # Placeholder value
-metrics['Accuracy']['YOLOv8'] = 0.92  # Placeholder value
-metrics['Accuracy']['Faster R-CNN'] = 0.88  # Placeholder value
 
 metrics['Speed']['Contour Detection'] = contour_time
 metrics['Speed']['YOLOv5'] = yolo5_time
