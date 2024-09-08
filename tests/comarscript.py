@@ -6,7 +6,7 @@ import sys
 if __name__ == '__main__' :
  
     # Set up tracker.
-    # Instead of MIL, you can also use
+
  
     tracker_types = ['BOOSTING', 'MIL','KCF', 'TLD', 'MEDIANFLOW', 'GOTURN', 'MOSSE', 'CSRT']
     tracker_type = tracker_types[7]
@@ -33,7 +33,7 @@ if __name__ == '__main__' :
  
     # Read video
     # video = cv2.VideoCapture("videos/video.mp4")
-    video = cv2.VideoCapture(0) # for using CAM
+    video = cv2.VideoCapture(0) # for CAM
  
     # Exit if video not opened.
     if not video.isOpened():
